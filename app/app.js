@@ -53,15 +53,20 @@ function openNav() {
         $('#nav-links').stop().animate({
             marginTop: "0"
         }, 750, 'easeOutQuad');
-        $('.navicon').html("<i class='fa fa-close fa-3x close-click' aria-hidden='true' onclick='closeNav()'></i>");
+        $('.navicon').html("<i class='fa fa-close fa-3x close-click' aria-hidden='true' onclick='closeNav()'></i>").fadeIn();
     }
 }
 
 function closeNav() {
     $('#nav-links').stop().animate({
         marginTop: "-150px"
-    }, 400, 'easeInQuad');
-    $('.navicon').html("<i class='fa fa-navicon fa-3x' aria-hidden='true' onclick='openNav()'></i>");
+    }, 400, 'easeInQuad', function() {
+        setTimeout(function() {
+            $('.navicon').html("<i class='fa fa-navicon fa-3x' aria-hidden='true' onclick='openNav()'></i>");
+        }, 100);
+
+    });
+
 }
 
 

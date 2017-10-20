@@ -83,7 +83,7 @@ a {
     margin-right: 25px;
     color: white;
     text-decoration: none;
-    text-shadow: 0px 0px 7px rgba(0, 0, 0, .5);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 a:last-child {
@@ -99,7 +99,7 @@ i.fa-home {
 }
 
 .fa-navicon, .fa-close {
-    text-shadow: 0px 0px 7px rgba(0, 0, 0, .5);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 /*nav i {*/
