@@ -49,19 +49,22 @@ p {
     font-size: 14px;
 }
 
-/* NAV */
+/* BEGIN NAV */
 
 nav {
     position: absolute;
+    top: -100%;
     display: flex;
     justify-content: space-between;
     height: 125px;
     width: 100%;
-    padding: 30px 35px 0 40px;
+    padding: 35px 35px 0 35px;
     box-sizing: border-box;
 }
 
 nav i {
+    position: fixed;
+    right: 35px;
     color: #f7f8f8;
     /*opacity: 0.6;*/
 }
@@ -84,12 +87,12 @@ nav span:last-child {
 
 /* END NAV */
 
-/* HOME SECTION */
+/* BEGIN HOME SECTION */
 
 #home-section {
     display: block;
     height: 100%;
-    background-image: linear-gradient(rgba(19, 18, 18, 0.25), rgba(19, 18, 18, 0.25)), url('../images/general/forest.jpg');
+    background-image: linear-gradient(rgba(19, 18, 18, 0.35), rgba(19, 18, 18, 0.35)), url('../images/general/forest.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -104,20 +107,22 @@ nav span:last-child {
     flex-direction: column;
 }
 
+.active {
+    margin-left: -200vw;
+}
+
 #home-content span:first-child {
     font-family: 'Raleway', sans-serif;
     font-size: 72px;
     font-weight: 800;
     color: #f7f8f8;
-    /*opacity: 0.6;*/
 }
 
 #home-content span:last-child {
     font-family: 'Raleway', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     color: #f7f8f8;
-    /*opacity: 0.6;*/
 }
 
 #home-end {
@@ -131,10 +136,10 @@ nav span:last-child {
 }
 
 #home-end #slide-arrows {
-    margin-left: 40px;
+    margin-left: 35px;
     display: flex;
     align-items: flex-end;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     color: #f7f8f8;
 }
 
@@ -142,19 +147,27 @@ nav span:last-child {
     margin-left: 25px;
 }
 
-#home-end-content-holder #home-end-content-downarrow {
+#home-end-content:hover{
+    cursor: pointer;
+}
+
+#home-end-content-holder #home-end-content-downchevron {
     width: 150px;
     height: 100%;
-    border: 2px solid #f7f8f8;
-    border-bottom: none;
+    border: 7.5px solid #f7f8f8;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #f7f8f8;
     float: left;
+    box-sizing: border-box;
 }
 
-#home-end-content-holder #home-end-content{
+#home-end-content-holder #home-end-content-downchevron:hover {
+    cursor: pointer;
+}
+
+#home-end-content-holder #home-end-content {
     min-width: calc(calc(1920px * 0.25) - 150px);
     height: 100%;
     display: flex;
@@ -169,3 +182,164 @@ nav span:last-child {
 }
 
 /*END HOME SECTION */
+
+/* BEGIN ABOUT SECTION */
+
+#about-section {
+    height: 75%;
+    display: flex;
+}
+
+.about-section-content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.about-section-content:first-child {
+    background: #f7f8f8;
+    color: #126059;
+}
+
+.about-section-content:last-child {
+    background: #126059;
+    color: #f7f8f8;
+}
+
+.about-section-content-holder {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+
+.about-section-header {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+}
+
+.about-section-content:first-child .about-section-header, #about-section-content:first-child .about-section-text {
+    color: #126059;
+}
+
+.about-section-content:last-child .about-section-header, #about-section-content:last-child .about-section-text {
+    color: #f7f8f8;
+}
+
+.about-section-content .about-section-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    width: 75%;
+}
+
+/* END ABOUT SECTION */
+
+/* BEGIN TEAM SECTION */
+
+#team-section {
+    background: #ededed;
+}
+
+#team-section-header {
+    width: 100%;
+    height: 150px;
+    background: #0c514b;
+}
+
+#team-section-header-text {
+    height: 100%;
+    width: 37.5%;
+    background: #126059;
+    padding-left: 5%;
+    box-sizing: border-box;
+}
+
+#team-section-header-text p {
+    color: #f9fafb;
+    font-family: 'Raleway', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 150px;
+}
+
+#team-section-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-section-holder {
+    width: 25vw;
+    min-height: 5vh;
+}
+
+.team-section-holder img {
+    height: auto;
+    min-height: 275px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: -4px;
+}
+
+.team-section-holder:first-child {
+    align-self: flex-end;
+}
+
+.team-section-holder:last-child {
+    align-self: flex-end;
+}
+
+.team-section-holder:nth-child(2) {
+    width: 100%;
+    min-height: 5vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.team-section-holder:nth-child(2) img {
+    height: auto;
+    max-height: 75vh;
+    width: 50%;
+    object-fit: cover;
+    object-position: 30%;
+}
+
+.team-section-info {
+    width: 50%;
+    height: 75vh;
+    background: #f7f8f8;
+    display: flex;
+    align-items: center;
+}
+
+.team-section-info-holder {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+
+.team-section-header {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    color: #126059;
+}
+
+.team-section-header span {
+    font-size: 22px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.team-section-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    width: 75%;
+    color: #126059;
+}
+
+/* END TEAM SECTION */
