@@ -1,21 +1,21 @@
 <!-----------DO NOT DELETE OR EDIT-------------
 
-AUTHOR: Name (Initials)
-BEGIN DATE:
-FILE NAME:
-TITLE:
-PURPOSE:
+AUTHOR: Brian J Brown
+BEGIN DATE: 10.6.2017
+FILE NAME: index.html
+TITLE: Index
 
 ************READ FIRST!**************
 
 Special thanks and appreciation to:
 
 StockSnap.io https://stocksnap.io
+Unsplash https://unsplash.com
 Font Awesome http://fontawesome.io
 
 *************************************
 
-Any recreation or copying of any website designs and any specific, recognizable scripting methods accessible through the client-side are prohibited.
+Any copying or theft of any website designs and any specific, recognizable scripts accessible through the client-side are prohibited.
 Please help fight against blatant plagiarism of intellectual property. Our creative world will thank you.
 
 -------------DO NOT DELETE OR EDIT------------>
@@ -35,7 +35,16 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
 
 <nav>
     <div><span>Indy | </span><span>Parks & Recreation</span></div>
-    <i class="fa fa-navicon fa-3x" aria-hidden="true"></i>
+    <div id="nav">
+        <div id="nav-links">
+            <a href="#home-section"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+            <a href="#about-section">About Us</a>
+            <a href="#team-section">Our Team</a>
+            <a>Services</a>
+            <a>Contact</a>
+        </div>
+        <div class="navicon"><i class="fa fa-navicon fa-3x" aria-hidden="true"></i></div>
+    </div>
 </nav>
 
 <div id="home-section">
@@ -98,11 +107,16 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
         </div>
     </div>
     <div id="team-section-content">
-        <div class="team-section-holder">
-            <img class="team-section-photo" src="images/general/woman.jpg">
+        <div class="team-section-container">
+            <div class="team-section-chevron">
+                <i class="fa fa-chevron-left fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="team-section-holder">
+                <img class="team-section-photo" src="images/general/woman.jpg">
+            </div>
         </div>
-        <div class="team-section-holder">
-            <img class="team-section-photo" src="images/general/otherGuy.jpg">
+        <div class="team-section-holder active-state">
+            <img class="team-section-photo-otherGuy" src="images/general/otherGuy.jpg">
             <div class="team-section-info">
                 <div class="team-section-info-holder">
                     <p class="team-section-header">
@@ -119,8 +133,13 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
                 </div>
             </div>
         </div>
-        <div class="team-section-holder">
-            <img class="team-section-photo" src="images/general/guy.jpg">
+        <div class="team-section-container">
+            <div class="team-section-chevron">
+                <i class="fa fa-chevron-left fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="team-section-holder">
+                <img class="team-section-photo" src="images/general/guy.jpg">
+            </div>
         </div>
     </div>
 </div>

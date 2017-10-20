@@ -62,12 +62,42 @@ nav {
     box-sizing: border-box;
 }
 
-nav i {
+#nav {
     position: fixed;
     right: 35px;
     color: #f7f8f8;
-    /*opacity: 0.6;*/
+    display: flex;
+    align-items: center;
 }
+
+#nav-links {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 42px;
+    margin-top: -150px;
+}
+
+a {
+    margin-right: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+i.fa-home {
+    vertical-align: middle;
+}
+
+.navicon:hover {
+    cursor: pointer;
+}
+
+/*nav i {*/
+    /*position: fixed;*/
+    /*right: 35px;*/
+    /*color: #f7f8f8;*/
+    /*!*opacity: 0.6;*!*/
+/*}*/
 
 nav span:first-child {
     font-family: 'Raleway', sans-serif;
@@ -270,9 +300,31 @@ nav span:last-child {
     flex-direction: column;
 }
 
+.team-section-container {
+    align-self: flex-end;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.team-section-chevron {
+    width: 150px;
+    height: 285px;
+    background: #126059;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-section-chevron {
+    color: #f7f8f8;
+}
+
 .team-section-holder {
-    width: 25vw;
+    max-width: 25vw;
     min-height: 5vh;
+    max-height: 285px;
 }
 
 .team-section-holder img {
@@ -284,14 +336,6 @@ nav span:last-child {
     margin-bottom: -4px;
 }
 
-.team-section-holder:first-child {
-    align-self: flex-end;
-}
-
-.team-section-holder:last-child {
-    align-self: flex-end;
-}
-
 .team-section-holder:nth-child(2) {
     width: 100%;
     min-height: 5vh;
@@ -299,7 +343,12 @@ nav span:last-child {
     overflow: hidden;
 }
 
-.team-section-holder:nth-child(2) img {
+.active-state {
+    max-height: 75vh;
+    max-width: 100%;
+}
+
+.team-section-holder:nth-child(2) img.team-section-photo-otherGuy {
     height: auto;
     max-height: 75vh;
     width: 50%;
