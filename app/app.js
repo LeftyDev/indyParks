@@ -53,7 +53,7 @@ function openNav() {
         $('#nav-links').stop().animate({
             marginTop: "0"
         }, 750, 'easeOutQuad');
-        $('.navicon').html("<i class='fa fa-close fa-3x close-click' aria-hidden='true' onclick='closeNav()'></i>").fadeIn();
+        $('.navicon').html("<i class='fa fa-close fa-3x close-click' aria-hidden='true' onclick='closeNav()'></i>");
     }
 }
 
